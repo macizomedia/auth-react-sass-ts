@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,300,700|Roboto:400|Manrope:500');
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal > * {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.overlap-group {
+    height: 420px;
+    margin-left: 0.5px;
+}
+.cover {
+    height: 309px;
+    left: 0;
+    position: absolute;
+    top: 111px;
+    width: 375px;
+}
+.rectangle-3 {
+    height: 233px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 375px;
+}
+
+.navigation-bar {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    min-height: 152px;
+    position: absolute;
+    top: 0;
+    width: 375px;
+}
+
+.voterookie-logo {
+    padding-top: 2rem;
+    height: 40px;
+    object-fit: contain;
+    width: 180px;
+}
+.flex-row {
+    align-items: center;
+    display: flex;
+    height: 64px;
+    margin-right: 8px;
+    min-width: 299px;
+}
+
+.rectangle-4 {
+    /* Rectangle 4 */
+
+    position: absolute;
+    width: 5px;
+    height: 62px;
+    left: 34px;
+    top: 442px;
+
+    /* Rookie Pink */
+
+    background: #da3675;
+}
+.text-2 {
+    /* Be part of the change */
+
+    position: absolute;
+    width: 284px;
+    height: 64px;
+    left: 47px;
+    top: 421px;
+
+    /* Heading */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+    /* or 107% */
+
+    letter-spacing: 0.02em;
+
+    /* Rookie Blue */
+
+    color: #2047ff;
+}
+
+.text-1 {
+    /* Your tool for civic participation */
+
+    position: absolute;
+    width: 274px;
+    height: 19px;
+    left: 34px;
+    top: 495px;
+
+    /* Body */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    /* Text */
+
+    color: #343846;
+}
+
+.text-3 {
+    /* our data privacy and inprint */
+    position: absolute;
+    width: 170px;
+    height: 11px;
+    left: 102.5px;
+    top: 755px;
+
+    /* Caption */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 11px;
+    /* identical to box height, or 92% */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    /* Rookie Pink */
+
+    color: #da3675;
+}
+
+.logo {
+    position: static;
+    left: 33.23%;
+    right: 34.57%;
+    top: 0%;
+    bottom: 0%;
+
+    background: src('@/assets/img/logo.png');
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+.figma-button-1 {
+    /* Buttons */
+    position: absolute;
+    width: 314px;
+    height: 56px;
+    left: 24.83px;
+    top: 558px;
+    cursor: pointer;
+
+    /* Gradient */
+
+    background: linear-gradient(244.58deg, #da3675 0%, #2047ff 100%);
+    /* Shadow */
+
+    box-shadow: 0px 10px 20px rgba(40, 38, 109, 0.18);
+    border-radius: 5px;
+
+    /* White */
+}
+.figma-button-2 {
+    /* Buttons */
+
+    position: absolute;
+    width: 314px;
+    height: 56px;
+    left: 24.83px;
+    top: 628px;
+
+    /* Rookie Pink */
+
+    border: 1px solid #da3675;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.action-1 {
+    position: absolute;
+    height: 19px;
+    left: 132.5px;
+    right: 132.5px;
+    top: 18.5px;
+
+    /* Button Text */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #ffffff;
+}
+
+.action-2 {
+    position: absolute;
+    height: 19px;
+    left: 77.5px;
+    right: 78.5px;
+    top: 18.5px;
+
+    /* Button Text */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* Text */
+
+    color: #343846;
+}
+
+.text-4 {
+    /* Sign up your organisation */
+
+    position: absolute;
+    width: 153px;
+    height: 11px;
+    left: 112px;
+    top: 719px;
+
+    /* Caption */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 11px;
+    /* identical to box height, or 92% */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    /* Rookie Blue */
+
+    color: #2047ff;
+}
