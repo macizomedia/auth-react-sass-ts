@@ -27,7 +27,7 @@ const defaultState: State = {
 }
 function App() {
     return (
-        <div className="App">
+        <div>
             <Suspense fallback={<span>waiting...</span>}>
                 <AuthProvider initialState={defaultState}>
                     <AppRoutes />

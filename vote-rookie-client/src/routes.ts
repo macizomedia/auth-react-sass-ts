@@ -1,7 +1,8 @@
 import Home from './views/Home'
-import { Welcome } from './views/Welcome'
+import Login from './views/Login'
 import { OnBoarding } from './views/OnBoarding'
 import Subscribe from './views/Subscribe'
+import { Welcome } from './views/Welcome'
 import { Logout } from './views/Logout'
 import { NotFound } from './views/NotFound'
 
@@ -12,14 +13,9 @@ const Routes = [
         isPrivate: false,
     },
     {
-        path: '/welcome',
-        component: Welcome,
+        path: '/login',
+        component: Login,
         isPrivate: true,
-    },
-    {
-        path: '/subscribe',
-        component: Subscribe,
-        isPrivate: false,
     },
     {
         path: '/register',
@@ -27,9 +23,14 @@ const Routes = [
         isPrivate: false,
     },
     {
-        path: '/login',
-        component: Home,
+        path: '/subscribe',
+        component: Subscribe,
         isPrivate: false,
+    },
+    {
+        path: '/welcome',
+        component: Welcome,
+        isPrivate: true,
     },
     {
         path: '/logout',

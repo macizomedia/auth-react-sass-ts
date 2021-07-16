@@ -8,16 +8,10 @@ function Header() {
         <div>
             <div className="overlap-group">
                 <img className="rectangle-3" src={rectangle} alt="rectangle" />
-                <img className="cover" src={img} alt="vote" />
                 <div className="navigation-bar">
-                    <div className="frame-logo">
-                        <img
-                            className="voterookie-logo"
-                            src={logo}
-                            alt="logo"
-                        />
-                    </div>
+                    <img className="voterookie-logo" src={logo} alt="logo" />
                 </div>
+                <img className="cover" src={img} alt="vote" />
             </div>
             <div className="flex-row">
                 <div className="rectangle-4"></div>

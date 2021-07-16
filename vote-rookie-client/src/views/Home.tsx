@@ -8,14 +8,17 @@ function Home() {
         <div>
             <Header />
             <div>
-                <Link to="/register">
+                <Link to="/login">
                     <button className="figma-button-1">
                         <span className="action-1">LOGIN</span>
                     </button>
                 </Link>
-                <button className="figma-button-2">
-                    <span className="action-2">START AS A CITIZEN</span>
-                </button>
+                <Link to="/register">
+                    <button className="figma-button-2">
+                        <span className="action-2">START AS A CITIZEN</span>
+                    </button>
+                </Link>
+                <div className="text-4">Sign up your organisation</div>
             </div>
             <Footer />
         </div>

@@ -2,6 +2,29 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --rookie-blue: rgba(32, 71, 255, 1);
+    --text: rgba(52, 56, 70, 1);
+    --grey: rgba(166, 170, 180, 1);
+    --mist-gray: rgba(196, 196, 196, 1);
+    --rookie-pink: rgba(218, 54, 117, 1);
+    --pattens-blue: rgba(223, 245, 254, 1);
+    --razzmatazz: rgba(231, 31, 103, 1);
+    --background: rgba(242, 242, 242, 1);
+    --white: rgba(255, 255, 255, 1);
+
+    --font-size-xxxs: 12px;
+    --font-size-m: 18px;
+    --font-size-l: 30px;
+    --font-size-s2: 16px;
+    --font-size-xs2: 15px;
+    --font-size-xxs2: 14px;
+
+    --font-family-manrope: 'Manrope';
+    --font-family-roboto: 'Roboto';
+    --font-family-rubik: 'Rubik';
+}
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',

@@ -27,9 +27,9 @@
     /* Auto Layout */
 
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: auto;
 
     position: absolute;
@@ -43,37 +43,12 @@
     background: linear-gradient(244.58deg, #da3675 0%, #2047ff 100%);
 }
 
-.frame-logo {
-    /* Frame 198 */
-
-    /* Auto Layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 15px 0px 10px;
-
-    position: static;
-    width: 375px;
-    height: 40.82px;
-    left: 0px;
-    top: 51.18px;
-
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 0px 0px;
-}
 
 .voterookie-logo {
-    padding-top: 2rem;
-    height: 40px;
-    object-fit: contain;
-    width: 180px;
+    align-self: center;
+    height: 48px;
+    object-fit:cover;
+    width: 130px;
 }
 .flex-row {
     align-items: center;
@@ -96,22 +71,7 @@
 
     background: #da3675;
 }
-.logo {
-    position: static;
-    left: 33.23%;
-    right: 34.57%;
-    top: 0%;
-    bottom: 0%;
 
-    background: src('@/assets/img/logo.png');
-
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 0px;
-}
 .progress-bar-on {
     display: flex;
     /* Progress Bar */
