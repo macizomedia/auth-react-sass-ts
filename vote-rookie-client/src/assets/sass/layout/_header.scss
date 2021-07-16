@@ -1,0 +1,145 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.overlap-group {
+    height: 420px;
+    margin-left: 0.5px;
+}
+.cover {
+    height: 309px;
+    left: 0;
+    position: absolute;
+    top: 111px;
+    width: 375px;
+}
+.rectangle-3 {
+    height: 233px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 375px;
+}
+
+.navigation-bar {
+    /* Navigation Bar */
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: auto;
+
+    position: absolute;
+    width: 375px;
+    height: 112px;
+    left: 0px;
+    top: 0px;
+
+    /* Gradient */
+
+    background: linear-gradient(244.58deg, #da3675 0%, #2047ff 100%);
+}
+
+.frame-logo {
+    /* Frame 198 */
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px 0px 10px;
+
+    position: static;
+    width: 375px;
+    height: 40.82px;
+    left: 0px;
+    top: 51.18px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.voterookie-logo {
+    padding-top: 2rem;
+    height: 40px;
+    object-fit: contain;
+    width: 180px;
+}
+.flex-row {
+    align-items: center;
+    display: flex;
+    height: 64px;
+    margin-right: 8px;
+    min-width: 299px;
+}
+
+.rectangle-4 {
+    /* Rectangle 4 */
+
+    position: absolute;
+    width: 5px;
+    height: 62px;
+    left: 34px;
+    top: 442px;
+
+    /* Rookie Pink */
+
+    background: #da3675;
+}
+.logo {
+    position: static;
+    left: 33.23%;
+    right: 34.57%;
+    top: 0%;
+    bottom: 0%;
+
+    background: src('@/assets/img/logo.png');
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+.progress-bar-on {
+    display: flex;
+    /* Progress Bar */
+
+    /* Auto Layout */
+
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 4px;
+
+    position: absolute;
+    width: 350px;
+    height: 41px;
+    left: 12.5px;
+    top: 124.41px;
+    /* Rookie Blue */
+
+    border: 1px solid #2047ff;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.get-started {
+    /* Get Started 1 */
+
+    position: relative;
+    width: 375px;
+    height: 812px;
+
+    background: #f2f2f2;
+}

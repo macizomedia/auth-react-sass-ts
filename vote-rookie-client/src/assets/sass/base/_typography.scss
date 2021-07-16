@@ -1,0 +1,157 @@
+/**
+ * Basic typography style for copy text
+ */
+
+.text-1 {
+    /* Your tool for civic participation */
+
+    position: absolute;
+    width: 274px;
+    height: 19px;
+    left: 34px;
+    top: 495px;
+
+    /* Body */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    /* Text */
+
+    color: #343846;
+}
+
+.text-2 {
+
+    /* Be part of the change */
+
+    position: absolute;
+    width: 284px;
+    height: 64px;
+    left: 47px;
+    top: 421px;
+
+    /* Heading */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+    /* or 107% */
+
+    letter-spacing: 0.02em;
+
+    /* Rookie Blue */
+
+    color: #2047ff;
+}
+
+
+.text-3 {
+
+    /* our data privacy and inprint */
+    position: absolute;
+    width: 170px;
+    height: 11px;
+    left: 102.5px;
+    top: 755px;
+
+    /* Caption */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 11px;
+    /* identical to box height, or 92% */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    /* Rookie Pink */
+
+    color: #da3675;
+}
+
+
+.text-4 {
+    
+    /* Sign up your organisation */
+
+    position: absolute;
+    width: 153px;
+    height: 11px;
+    left: 112px;
+    top: 719px;
+
+    /* Caption */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 11px;
+    /* identical to box height, or 92% */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    /* Rookie Blue */
+
+    color: #2047ff;
+}
+
+
+.hero {
+    /* Hello! Great that you are joining Vote Rookie! */
+
+    position: absolute;
+    width: 304px;
+    height: 96px;
+    left: 35.5px;
+    top: 215.36px;
+
+    /* Heading */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+    /* or 107% */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Text */
+
+    color: #343846;
+}
+
+hero-2 {
+    /* To personalise Vote Rookie for you, I would like to ask you a few questions. Please fill in the details below */
+
+    position: absolute;
+    width: 316px;
+    height: 76px;
+    left: 29.5px;
+    top: 325.75px;
+
+    /* Body */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+
+    /* Text */
+
+    color: #343846;
+}
