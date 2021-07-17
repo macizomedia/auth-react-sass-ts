@@ -22,7 +22,7 @@ export interface State {
     email_verified_at?: string
     phone?: string
     password?: string
-    verify?: boolean
+    verify: boolean
     token?: string
     message?: string
     interest?: any[]
@@ -34,6 +34,7 @@ export interface State {
 export const defaultState: State = {
     name: 'Guest',
     confirmEmail: 'mail@mail.com',
+    verify: false,
 }
 
 type ActionType =
@@ -50,6 +51,7 @@ type ActionType =
           email: string
           confirmEmail: string
           password: string
+          verify: boolean
       }
     | {
           type: 'LOGIN'
@@ -59,7 +61,7 @@ type ActionType =
           token: string
           verify: boolean
       }
-    | { type: 'ERROR'; message: string }
+    | { type: 'ERROR'; message: string; verify: boolean }
     | { type: 'LOGOUT' }
 
 type useAuthStateType = ReturnType<typeof useAuth>
@@ -96,6 +98,7 @@ export function useAuth(initialState: State): {
                         ...state,
                         name: action.name,
                         email: action.email,
+                        verify: action.verify,
                         id: Math.floor(Math.random() * 13) + 1,
                     }
                 case 'LOGIN':
@@ -115,6 +118,7 @@ export function useAuth(initialState: State): {
                 case 'ERROR':
                     return {
                         message: action.message,
+                        verify: action.verify,
                     }
                 default:
                     return defaultState
@@ -133,18 +137,21 @@ export function useAuth(initialState: State): {
         let response = axios.post(endpoint + '/users', body, config)
         response.then((result) => {
             if (result.data) {
-                console.log('REGISTER')
                 console.log('d', result.data.data)
                 dispatch({
                     type: 'SUBSCRIBE',
                     id: result.data.data,
                     phone: result.data,
                     email: result.data,
-                    verify: false,
+                    verify: true,
                 })
             } else {
                 console.log(result.data)
-                dispatch({ type: 'ERROR', message: 'invalid credentials' })
+                dispatch({
+                    type: 'ERROR',
+                    message: 'invalid credentials',
+                    verify: false,
+                })
             }
         })
     }, [])
@@ -170,8 +177,11 @@ export function useAuth(initialState: State): {
                 )
                 localStorage.setItem('currentUser', JSON.stringify(result.data))
             } else {
-                console.log(result.data.msg)
-                dispatch({ type: 'ERROR', message: 'invalid credentials' })
+                dispatch({
+                    type: 'ERROR',
+                    message: 'invalid credentials',
+                    verify: false,
+                })
             }
         })
     }, [])
@@ -187,8 +197,9 @@ export function useAuth(initialState: State): {
                     type: 'REGISTER',
                     name: data.name,
                     email: data.email,
-                    confirmEmail: "no",
+                    confirmEmail: 'no',
                     password: data.password,
+                    verify: true,
                 })
                 localStorage.setItem('currentUser', JSON.stringify(data))
             }

@@ -204,14 +204,37 @@
     color: #343846;
 }
 
-hero-2 {
+.hero-2 {
     /* To personalise Vote Rookie for you, I would like to ask you a few questions. Please fill in the details below */
 
     position: absolute;
     width: 316px;
     height: 76px;
     left: 29.5px;
-    top: 325.75px;
+    top: 315.75px;
+
+    /* Body */
+
+    font-family: Rubik;
+    font-style: inherit;
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 20px;
+    text-align: center;
+
+    /* Text */
+
+    color: #092794;
+}
+
+.figma_text {
+    /* To personalise Vote Rookie for you, I would like to ask you a few questions. Please fill in the details below */
+
+    position: absolute;
+    width: 316px;
+    height: 76px;
+    left: 29.5px;
+    top: 349.75px;
 
     /* Body */
 
@@ -219,7 +242,53 @@ hero-2 {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 29px;
+    line-height: 19px;
+    text-align: center;
+
+    /* Text */
+
+    color: #343846;
+}
+
+.figma_hero_text {
+    /* Hello! Great that you are joining Vote Rookie! */
+
+    position: absolute;
+    width: 304px;
+    height: 96px;
+    left: 35.5px;
+    top: 215.36px;
+
+    /* Heading */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+    /* or 107% */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Text */
+}
+.figma_text_small {
+    /* To personalise Vote Rookie for you, I would like to ask you a few questions. Please fill in the details below */
+
+    position: absolute;
+    width: 316px;
+    height: 76px;
+    left: 29.5px;
+    top: 399.75px;
+
+    /* Body */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
     text-align: center;
 
     /* Text */

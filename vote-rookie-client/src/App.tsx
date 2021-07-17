@@ -11,6 +11,7 @@ import { State } from './useAuth'
 const defaultState: State = {
     name: 'arepa',
     confirmEmail: 'guest@voteRookie.com',
+    verify: false
 }
 function App() {
     return (

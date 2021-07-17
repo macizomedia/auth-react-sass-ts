@@ -3,11 +3,15 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import { useRegister } from '../../useAuth'
 import { State } from '../../useAuth'
 
+//import { useHistory } from 'react-router-dom'
+
 export interface IFormProps {
+    isVerify: boolean
     children?: React.ReactNode
     onClick?: (e: any) => void
 }
-export const Form = () => {
+export const Form = (props: IFormProps) => {
+    //let history = useHistory()
     const registerUser = useRegister()
 
     const {
@@ -21,54 +25,62 @@ export const Form = () => {
     const onSubmit: SubmitHandler<State> = (data, e) => {
         e?.target.reset()
         console.log(data)
-        registerUser({ ...data, password: 'secret' })
+        registerUser({ ...data, password: 'secret', verify: true })
     }
-    return (
-        <div className="form__group">
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="form__field">
-                    <input
-                        className="form-register_field"
-                        placeholder="Full Name"
-                        defaultValue=""
-                        type="text"
-                        {...register('name')}
-                    />
-                </div>
-                <div className="form__field">
-                    <input
-                        className="form-register_field"
-                        placeholder="Email Adress"
-                        defaultValue=""
-                        type="email"
-                        {...register('email')}
-                    />
-                </div>
-                <div className="form__field">
-                    <input
-                        className="form-register_field"
-                        placeholder="Password"
-                        {...register('confirmEmail', {
-                            required: true,
-                            validate: () =>
-                                getValues('email') ===
-                                getValues('confirmEmail'),
-                        })}
-                    />
-                    <div style={{ color: 'red' }}>
-                        {errors.confirmEmail && (
-                            <span>
-                                <small>Emails don't Match</small>
-                            </span>
-                        )}
+    if (props.isVerify) {
+        return (
+            <>
+                <h5>inutil</h5>
+            </>
+        )
+    } else {
+        return (
+            <div className="form__group">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="form__field">
+                        <input
+                            className="form-register_field"
+                            placeholder="Full Name"
+                            defaultValue=""
+                            type="text"
+                            {...register('name')}
+                        />
                     </div>
-                </div>
-                <button className="figma_button_continue" type="submit">
-                    <span className="figma_button_text">CONTINUE</span>
-                </button>
-            </form>
-        </div>
-    )
+                    <div className="form__field">
+                        <input
+                            className="form-register_field"
+                            placeholder="Email Adress"
+                            defaultValue=""
+                            type="email"
+                            {...register('email')}
+                        />
+                    </div>
+                    <div className="form__field">
+                        <input
+                            className="form-register_field"
+                            placeholder="Password"
+                            {...register('confirmEmail', {
+                                required: true,
+                                validate: () =>
+                                    getValues('email') ===
+                                    getValues('confirmEmail'),
+                            })}
+                        />
+                        <div style={{ color: 'red' }}>
+                            {errors.confirmEmail && (
+                                <span>
+                                    <small>Emails don't Match</small>
+                                </span>
+                            )}
+                        </div>
+                    </div>
+                    <button className="figma_button_continue" type="submit">
+                        <span className="figma_button_text">CONTINUE</span>
+                    </button>
+                </form>
+            </div>
+        )
+    }
 }
 
 export default Form

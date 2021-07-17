@@ -9,7 +9,7 @@ const Login = () => {
     return (
         <div>
             <Header />
-            <Form />
+            <Form isVerify={true} />
 
             <p className="text-foot">
                 <span>
