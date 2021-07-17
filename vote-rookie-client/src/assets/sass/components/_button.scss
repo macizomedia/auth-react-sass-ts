@@ -6,9 +6,8 @@
     height: 46px;
     background: #272727;
     color: $white;
-    
-    margin: 2rem;
 
+    margin: 2rem;
 
     /* Shadow */
     box-shadow: 0px 10px 20px rgba(40, 38, 109, 0.18);
@@ -39,7 +38,6 @@
     box-shadow: 0px 10px 20px rgba(55, 59, 66, 0.342);
     border-radius: 5px;
 }
-
 
 .figma-button-1 {
     /* Buttons */
@@ -123,4 +121,22 @@
     /* Text */
 
     color: #343846;
+}
+
+.login_button {
+    /* Buttons */
+
+    position: absolute;
+    width: 314px;
+    height: 56px;
+    left: 30.5px;
+    top: 554px;
+
+    /* Gradient */
+
+    background: linear-gradient(244.58deg, #da3675 0%, #2047ff 100%);
+    /* Shadow */
+
+    box-shadow: 0px 10px 20px rgba(40, 38, 109, 0.18);
+    border-radius: 5px;
 }

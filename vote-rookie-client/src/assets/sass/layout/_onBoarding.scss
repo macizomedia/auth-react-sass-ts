@@ -1,0 +1,180 @@
+.get-started-1 .text-1 {
+    letter-spacing: 0.6px;
+    line-height: 32px;
+    margin-left: 2px;
+    margin-top: 49px;
+    min-height: 96px;
+    min-width: 306px;
+    text-align: center;
+    width: 306px;
+}
+
+.get-started-1 .span {
+    letter-spacing: 0.18px;
+}
+
+.get-started-1 {
+    align-items: center;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    height: 812px;
+    width: 375px;
+}
+
+.get-started-1 .overlap-group {
+    height: 102px;
+    position: relative;
+    width: 375px;
+}
+
+.get-started-1 .status-bar {
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 375px;
+}
+
+.get-started-1 .navigation-bar {
+    align-items: center;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    min-height: 102px;
+    position: absolute;
+    top: 0;
+    width: 375px;
+}
+
+.get-started-1 .status-bar-1 {
+    align-items: center;
+    display: flex;
+    height: 44px;
+    justify-content: flex-end;
+    min-width: 375px;
+    padding: 12px 14.6px;
+}
+
+.get-started-1 .x941-i14901521525 {
+    align-self: flex-end;
+    height: 18px;
+    letter-spacing: -0.3px;
+    min-height: 18px;
+    min-width: 56px;
+    text-align: center;
+    width: 56px;
+}
+
+.get-started-1 .mobile-signal {
+    height: 11px;
+    margin-left: 216px;
+    margin-top: 2px;
+    width: 18px;
+}
+
+.get-started-1 .wifi {
+    height: 12px;
+    margin-left: 4px;
+    margin-top: 1.63px;
+    width: 16px;
+}
+
+.get-started-1 .battery {
+    height: 12px;
+    margin-left: 4px;
+    margin-top: 2px;
+    width: 24px;
+}
+
+.get-started-1 .voterookie-logo-2 {
+    height: 41px;
+    margin-right: 5px;
+    margin-top: 7px;
+    object-fit: cover;
+    width: 121px;
+}
+
+.get-started-1 .progress-bar {
+    align-items: flex-end;
+    border-radius: 100px;
+    display: flex;
+    height: 41px;
+    margin-top: 22px;
+    min-width: 350px;
+    padding: 0 1px;
+}
+
+.get-started-1 .frame-180 {
+    height: 53px;
+    margin-bottom: -16px;
+    width: 61px;
+}
+.get-started-1 .text-1 {
+    color: var(--text);
+    min-height: 76px;
+    min-width: 318px;
+    text-align: center;
+    width: 318px;
+}
+.get-started-1 .text-3 {
+    color: var(--text);
+    margin-left: 2px;
+    margin-top: 14px;
+    min-height: 76px;
+    min-width: 318px;
+    text-align: center;
+    width: 318px;
+}
+
+.get-started-1 .span {
+    letter-spacing: 0.18px;
+}
+
+.figma_text {
+    /* To personalise Vote Rookie for you, I would like to ask you a few questions. Please fill in the details below */
+
+    position: absolute;
+    width: 316px;
+    height: 76px;
+    left: 29.5px;
+    top: 325.75px;
+
+    /* Body */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* Text */
+
+    color: #343846;
+}
+
+.figma_hero_text {
+    /* Hello! Great that you are joining Vote Rookie! */
+
+    position: absolute;
+    width: 304px;
+    height: 96px;
+    left: 35.5px;
+    top: 215.36px;
+
+    /* Heading */
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+    /* or 107% */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Text */
+}

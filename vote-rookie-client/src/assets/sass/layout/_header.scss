@@ -43,12 +43,19 @@
     background: linear-gradient(244.58deg, #da3675 0%, #2047ff 100%);
 }
 
-
 .voterookie-logo {
     align-self: center;
     height: 48px;
-    object-fit:cover;
+    object-fit: cover;
     width: 130px;
+}
+.voterookie-1 {
+    /* voterookie 1 */
+    height: 100px;
+    width: 192px;
+    position: absolute;
+    left: 90px;
+    top: 218px;
 }
 .flex-row {
     align-items: center;
@@ -65,11 +72,29 @@
     width: 5px;
     height: 62px;
     left: 34px;
-    top: 442px;
+    top: 422px;
 
     /* Rookie Pink */
 
     background: #da3675;
+}
+
+.rectangle-30 {
+    position: absolute;
+    width: 375px;
+    height: 374px;
+    left: 0px;
+    top: 0px;
+
+    /* Gradient */
+
+    background: linear-gradient(244.58deg, #da3675 0%, #2047ff 100%);
+}
+
+.ractangle-300 {
+    /* Gradient */
+
+    background: linear-gradient(244.58deg, #da3675 0%, #2047ff 100%);
 }
 
 .progress-bar-on {
@@ -92,14 +117,4 @@
     border: 1px solid #2047ff;
     box-sizing: border-box;
     border-radius: 100px;
-}
-
-.get-started {
-    /* Get Started 1 */
-
-    position: relative;
-    width: 375px;
-    height: 812px;
-
-    background: #f2f2f2;
 }

@@ -15,7 +15,7 @@ const Routes = [
     {
         path: '/login',
         component: Login,
-        isPrivate: true,
+        isPrivate: false,
     },
     {
         path: '/register',

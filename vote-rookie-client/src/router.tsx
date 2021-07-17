@@ -6,6 +6,7 @@ import {
     Switch,
 } from 'react-router'
 import { createBrowserHistory } from 'history'
+import { useAuthState } from 'useAuth'
 import AuthRoute from './AuthRoute'
 import Routes from './routes'
 import { SessionContext, getSessionCookie } from './sessions'
@@ -13,6 +14,11 @@ import { SessionContext, getSessionCookie } from './sessions'
 const history = createBrowserHistory()
 
 export const AppRoutes = () => {
+
+    let currentState = useAuthState()
+
+    console.log(currentState)
+    
     const [session, setSession] = useState(getSessionCookie())
     return (
         <SessionContext.Provider value={{ session, setSession }}>

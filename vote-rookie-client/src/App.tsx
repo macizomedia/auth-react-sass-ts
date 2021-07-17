@@ -4,26 +4,13 @@
 import React, { Suspense } from 'react'
 import { AppRoutes } from './router'
 import { AuthProvider } from './useAuth'
-import { load } from './store'
 import './assets/sass/main.scss'
-load('welcome')
-interface State {
-    id?: number
-    email?: string
-    phone?: string
-    password?: string
-    verify?: boolean
-    token?: string
-    message?: string
-    email_verified_at?: string
-    avatar?: string
-    interest?: any[]
-    settings?: {}
-    store?: []
-}
+
+import { State } from './useAuth'
 
 const defaultState: State = {
-    email: 'guest@voteRookie.com',
+    name: 'arepa',
+    confirmEmail: 'guest@voteRookie.com',
 }
 function App() {
     return (

@@ -5,33 +5,35 @@ import React, {
     useContext,
 } from 'react'
 import axios from 'axios'
-
-let endpoint = 'https://voterookieapi.azurewebsites.net/api/v1/'
+let endpoint = 'http://localhost:4040/api/v1'
 
 const config = {
     headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        'Content-Type': 'application/json',
     },
 }
 
-interface State {
+export interface State {
     id?: number
+    name?: string
+    avatar?: string
     email?: string
+    confirmEmail?: string
+    email_verified_at?: string
     phone?: string
     password?: string
     verify?: boolean
     token?: string
     message?: string
+    interest?: any[]
     settings?: {}
+    store?: []
     project?: []
 }
 
-const defaultState: State = {
-    email: 'Guest',
-    password: '',
-    verify: false,
-    id: 1,
-    token: '',
+export const defaultState: State = {
+    name: 'Guest',
+    confirmEmail: 'mail@mail.com',
 }
 
 type ActionType =
@@ -44,11 +46,10 @@ type ActionType =
       }
     | {
           type: 'REGISTER'
-          id: number
-          password: string
+          name: string
           email: string
-          token: string
-          verify: boolean
+          confirmEmail: string
+          password: string
       }
     | {
           type: 'LOGIN'
@@ -75,29 +76,27 @@ export function useAuth(initialState: State): {
     state: State
     loginUser: (ref: HTMLInputElement[]) => void
     subscribeUser: (data: State) => void
-    registerUser: (ref: HTMLInputElement[]) => void
+    registerUser: (data: State) => void
     logoutUser: (e: { preventDefault(): void }) => void
 } {
     const [state, dispatch] = useReducer(
         (state: State, action: ActionType): State => {
-            console.log(state + '\n' + action)
+            //console.log({...state, action})
             switch (action.type) {
                 case 'SUBSCRIBE':
                     return {
                         ...state,
                         email: action.email,
                         phone: action.phone,
-                        verify: action.verify,
+                        verify: false,
                         id: Math.floor(Math.random() * 13) + 1,
                     }
                 case 'REGISTER':
                     return {
                         ...state,
-                        password: action.password,
+                        name: action.name,
                         email: action.email,
-                        verify: action.verify,
                         id: Math.floor(Math.random() * 13) + 1,
-                        token: action.token,
                     }
                 case 'LOGIN':
                     return {
@@ -125,19 +124,24 @@ export function useAuth(initialState: State): {
     )
 
     const subscribeUser = useCallback((data) => {
-        let body = {data}
-        let response = axios.post(endpoint + 'register', body, config)
+        console.log(data)
+        let body = {
+            name: data.name,
+            email: data.email,
+            password: data.password,
+        }
+        let response = axios.post(endpoint + '/users', body, config)
         response.then((result) => {
             if (result.data) {
                 console.log('REGISTER')
+                console.log('d', result.data.data)
                 dispatch({
                     type: 'SUBSCRIBE',
-                    id: result.data.user.id,
-                    phone: result.data.user.phone,
-                    email: result.data.user.email,
+                    id: result.data.data,
+                    phone: result.data,
+                    email: result.data,
                     verify: false,
                 })
-                console.log("d",result.data)
             } else {
                 console.log(result.data)
                 dispatch({ type: 'ERROR', message: 'invalid credentials' })
@@ -172,21 +176,21 @@ export function useAuth(initialState: State): {
         })
     }, [])
 
-    const registerUser = useCallback((ref: HTMLInputElement[]) => {
-        let body = { email: ref[0].value, password: ref[1].value }
-        let response = axios.post(endpoint + 'users/new', body, config)
+    const registerUser = useCallback((data) => {
+        console.log(data)
+        let body = { ...data }
+        let response = axios.post(endpoint + '/users', body, config)
         response.then((result) => {
-            console.log(result)
-            if (result.data) {
+            //console.log({...result})
+            if (result.status === 201) {
                 dispatch({
                     type: 'REGISTER',
-                    id: 0,
-                    email: result.data.user.email,
-                    password: result.data.user.password,
-                    token: result.data.token,
-                    verify: false,
+                    name: data.name,
+                    email: data.email,
+                    confirmEmail: "no",
+                    password: data.password,
                 })
-                localStorage.setItem('currentUser', JSON.stringify(result.data))
+                localStorage.setItem('currentUser', JSON.stringify(data))
             }
         })
     }, [])
