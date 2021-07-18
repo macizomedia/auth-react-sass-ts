@@ -1,23 +1,37 @@
 import { proxy, subscribe as valtioSubscribe, snapshot } from 'valtio'
 
 export interface Store {
-    title: string
+    screen: string
+    hero: string
+    span: string
+    message: string
     text: string
+    foot: string
 }
 
 const store = proxy<Store>({
-    title: '',
+    screen: '',
+    hero: '',
+    span: '',
+    message: '',
     text: '',
+    foot: '',
 })
 
-export const load = (client: string): void => {
-    fetch(`http://localhost:4000/${client}`)
-        .then((resp) => resp.json())
-        .then((data) => {
-            console.log(data)
-            store.title = data.title
-            store.text = data.hero
-        })
+export const load = (): void => {
+    fetch('./content.json', {
+        method: 'GET', 
+        mode: 'no-cors', 
+        cache: 'no-cache', 
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', 
+    }).then((response) => {
+         response.json()
+    }).then((data) => console.log(data))
 }
 
 export const subscribe = (callback: (state: Store) => void): (() => void) => {

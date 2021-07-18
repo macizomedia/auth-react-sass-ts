@@ -9253,6 +9253,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-onboarding-pro@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/react-onboarding-pro/-/react-onboarding-pro-0.5.1.tgz#ad9ac6c3cf82da28991ae55d386def4c400ebdcf"
+  integrity sha512-B+yUi1R8SMz3qMe/w4l0Sq7aVTMtai4cycEus0nbFD7FgbNdBrlO9CuazryubcUu7865Dlv8neY7PnDkylWIzQ==
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"

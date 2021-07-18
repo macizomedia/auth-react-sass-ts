@@ -2,14 +2,14 @@ import React from 'react'
 
 // Container
 import Form from 'components/Commons/Form'
-import Footer from 'components/Footer'
+import Footer from 'components/Commons/Footer'
 import { Header } from 'components/OnBoarding/Header'
 
 const Login = () => {
     return (
         <div>
             <Header />
-            <Form isVerify={true} />
+            <Form />
 
             <p className="text-foot">
                 <span>

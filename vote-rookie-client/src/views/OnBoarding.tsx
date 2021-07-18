@@ -1,20 +1,21 @@
 import React from 'react'
 import Form from 'components/Commons/Form'
-import Footer from 'components/Footer'
+import Header from 'components/Commons/Header'
+/* import 'react-onboarding-pro/build/index.css' */
+/* import Onboarding from 'react-onboarding-pro' */
 
 import { useAuthState } from '../useAuth'
-import Header from 'components/Commons/Header'
+import Avatar from 'components/Commons/Avatar'
 
 export const OnBoarding = () => {
     const state = useAuthState()
 
     let isVerify = state.verify
     return (
-        <div>
-            <Header/>
-            <Form isVerify={isVerify}/>
-            
-            <Footer></Footer>
-        </div>
+        <>
+            <Header />
+            {isVerify && <Avatar />}
+            {!isVerify && <Form />}
+        </>
     )
 }

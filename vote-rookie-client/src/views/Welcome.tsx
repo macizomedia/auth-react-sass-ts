@@ -29,8 +29,8 @@ export const Welcome: React.SFC<ChildComponentProps> = ({ history }) => {
 
   return (
       <div style={{ marginTop: '1rem' }}>
-          <h3>{store.title}</h3>
-          <div>{JSON.stringify(store.text)}</div>
+          <h3>{store}</h3>
+          <div>{JSON.stringify(store)}</div>
           <form onSubmit={handleSubmit}>
               <input
                   className="form__field"
