@@ -1,11 +1,12 @@
 import React from 'react'
+import Index from '../components/Subscribe/Index'
 
 function Subscribe() {
-  return (
-    <div>
-      <h1>Subscribe</h1>
-    </div>
-  )
+    return (
+        <>
+            <Index />
+        </>
+    )
 }
 
 export default Subscribe
