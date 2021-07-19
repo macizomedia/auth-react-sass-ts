@@ -30,7 +30,7 @@ const Porcentage = styled.div`
     border: 1px inset #50284e;
     border-radius: 13px;
     height: 33px;
-    min-width: 20px;
+    min-width: 50px;
     position: absolute;
     left: 4px;
     margin-top: 2px;
@@ -41,7 +41,7 @@ const Progress = ({ porcentage }: { porcentage: number }) => {
     return (
         <Frame>
             <Bar>
-                <Porcentage style={{width:`${porcentage * 3}px`}}>{`${JSON.stringify(porcentage)}%`}</Porcentage>
+                <Porcentage style={{width:`${porcentage * 10}px`}}>{`${JSON.stringify(porcentage)}%`}</Porcentage>
             </Bar>
         </Frame>
     )

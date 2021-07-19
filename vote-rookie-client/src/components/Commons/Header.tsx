@@ -28,7 +28,9 @@ const Header = () => {
                 <Message
                     title={content[0].hero}
                     span={content[0].span}
+                    name={null!}
                     content={content[0].message}
+                    text={content[0].text}
                     foot={content[0].foot}
                 ></Message>
             )}

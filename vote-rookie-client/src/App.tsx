@@ -8,8 +8,6 @@ import { State } from './useAuth'
 import './assets/sass/main.scss'
 
 const defaultState: State = {
-    name: 'arepa',
-    confirmEmail: 'guest@voteRookie.com',
     verify: false,
 }
 function App() {

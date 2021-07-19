@@ -41,8 +41,8 @@ type ActionType =
     | {
           type: 'SUBSCRIBE'
           id: number
+          name: string
           email: string
-          phone: string
           verify: boolean
       }
     | {
@@ -89,8 +89,8 @@ export function useAuth(initialState: State): {
                     return {
                         ...state,
                         email: action.email,
-                        phone: action.phone,
-                        verify: false,
+                        name: action.name,
+                        verify: action.verify,
                         id: Math.floor(Math.random() * 13) + 1,
                     }
                 case 'REGISTER':
@@ -140,9 +140,9 @@ export function useAuth(initialState: State): {
                 console.log('d', result.data.data)
                 dispatch({
                     type: 'SUBSCRIBE',
-                    id: result.data.data,
-                    phone: result.data,
-                    email: result.data,
+                    id: 1,
+                    name: data.name,
+                    email: data.email,
                     verify: true,
                 })
             } else {
