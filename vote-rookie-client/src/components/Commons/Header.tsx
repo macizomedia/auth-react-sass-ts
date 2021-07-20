@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../assets/img/logo.png'
-import Message from './Message'
-import Progress from 'components/Commons/Progress'
+import Message from '../Fragments/Message'
+import Progress from 'components/Fragments/Progress'
 import content from '../../content.json'
 
 import { useAuthState } from '../../useAuth'

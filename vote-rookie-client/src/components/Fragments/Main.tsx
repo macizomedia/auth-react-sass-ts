@@ -1,5 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+
+// TODO logo must be move outside the component
+
+/**
+ * Challenge: 
+ * 
+ * Make the image a props that can be pass into
+ * the component.
+ * 
+ * HINT: Check on Button Component
+ * 
+ */
+
+
 import logo from '../../assets/img/logo.png'
 
 const Divider = styled.div`

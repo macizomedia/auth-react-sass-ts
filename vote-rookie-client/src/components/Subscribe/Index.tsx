@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import Progress from 'components/Commons/Progress'
+import Progress from 'components/Fragments/Progress'
 import Main from 'components/Fragments/Main'
-import Message from 'components/Commons/Message'
+import Message from 'components/Fragments/Message'
 
 import { State, useAuthState, useSubscribe } from '../../useAuth'
 
